@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel d'Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .images {
+            display: none; /* Cacher toutes les images par défaut */
+            justify-content: center; /* Centrer l'image */
+            align-items: center; /* Centrer verticalement */
+        }
+        .images.active {
+            display: flex; /* Afficher seulement l'image active */
+        }
+        .images img {
+            max-width: 100%; /* Limiter la largeur de l'image */
+            height: auto; /* Maintenir le ratio */
+            border-radius: 10px;
+        }
+        .button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="images active"><img src="sm1.jpg" alt="Image 1"></div>
+    <div class="images"><img src="sm2.jpg" alt="Image 2"></div>
+    <div class="images"><img src="sm3.jpg" alt="Image 3"></div>
+    <button class="button prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="button next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+<div class="carousel">
+    <div class="image active"><img src="sm1.jpg" alt="Image 1"></div>
+    <div class="image"><img src="sm2.jpg" alt="Image 2"></div>
+    <div class="image"><img src="sm3.jpg" alt="Image 3"></div>
+    <button class="button prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="button next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+<div class="carousel">
+    <div class="imag active"><img src="sm1.jpg" alt="Image 1"></div>
+    <div class="imag"><img src="sm2.jpg" alt="Image 2"></div>
+    <div class="imag"><img src="sm3.jpg" alt="Image 3"></div>
+    <button class="button prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="button next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.images');
+    const totalImages = images.length;
+
+    function changeImage(direction) {
+        images[currentIndex].classList.remove('active'); // Cacher l'image actuelle
+        currentIndex = (currentIndex + direction + totalImages) % totalImages; // Calculer la nouvelle image
+        images[currentIndex].classList.add('active'); // Afficher la nouvelle image
+    }
+</script>
+<script>
+    let currentInde = 0;
+    const image = document.querySelectorAll('.image');
+    const totalImage = image.length;
+
+    function changeImage(direction) {
+        image[currentInde].classList.remove('active'); // Cacher l'image actuelle
+        currentInde = (currentInde + direction + totalImage) % totalImage; // Calculer la nouvelle image
+        image[currentInde].classList.add('active'); // Afficher la nouvelle image
+    }
+</script>
+<script>
+    let currentInd = 0;
+    const imag = document.querySelectorAll('.imag');
+    const totalImag = imag.length;
+
+    function changeImage(direction) {
+        imag[currentInd].classList.remove('active'); // Cacher l'image actuelle
+        currentInd = (currentInd + direction + totalImag) % totalImag; // Calculer la nouvelle image
+        imag[currentInd].classList.add('active'); // Afficher la nouvelle image
+    }
+</script>
+
+</body>
+</html>

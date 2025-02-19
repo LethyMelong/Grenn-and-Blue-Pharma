@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green & Blue Pharma</title>
+    <!--link rel="stylesheet" href="par.css"-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='par.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!--h1>Green & Blue Pharma</h1-->
+            <a href="#" class ="logo">Green & Blue Pharma</a>
+            <nav>
+                
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Produits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <button class="menu-toggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="bienvenue">Bienvenue à <span class="bienve"></span> </h2>
+            <p>Votre santé est notre priorité. Découvrez nos services et produits de qualité.</p>
+            <a href="#services" class="btn">Découvrir nos services</a>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-list">
+                <div class="colonne">
+                    <div class="service">
+                        <h3>Conseils Santé</h3>
+                        <p>Des conseils personnalisés pour votre bien-être.</p>
+                        
+                    </div>
+                    <div class="gallery">
+                        <img src="{{url_for('static', filename='assets/plus.jpg') }}" alt="Service 1" class="active">
+                        <img src="{{url_for('static', filename='assets/c1.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/c2.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/c3.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/c4.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/cs2.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/cs3.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/c5.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/cs4.jpg') }}" alt="Service 1">
+                        <img src="{{url_for('static', filename='assets/c6.jpg') }}" alt="Service 1">
+                    </div>
+                </div>
+                <div class="colonne">
+                    <div class="service">
+                        <h3>Planning Familial</h3>
+                        <p>Desireux de planifier ses accouchements, nous sommes là !</p>
+                        
+                    </div>
+                    <div class="gallery">
+                        <img src="{{url_for('static', filename='assets/pf1.jpg') }}" alt="Service 2" class="active">
+                        <img src="{{url_for('static', filename='assets/en.jpg') }}" alt="Service 2">
+                        <img src="{{url_for('static', filename='assets/pf2.jpg') }}" alt="Service 2">
+                        <img src="{{url_for('static', filename='assets/pf4.jpg') }}" alt="Service 2">
+                    </div>
+                </div>
+                <div class="colonne">
+                    <div class="service">
+                        <h3>Suivi Medical</h3>
+                        <p>Faites vous suivre regulèrement par un personnel qualifié.</p>
+                        
+                    </div>
+                    <div class="gallery">
+                        <img src="{{url_for('static', filename='assets/sm1.jpg') }}" alt="Service 3" class="active">
+                        <img src="{{url_for('static', filename='assets/sm2.jpg') }}" alt="Service 3">
+                        <img src="{{url_for('static', filename='assets/reeducation1.jpg') }}" alt="Service 3">
+                        <img src="{{url_for('static', filename='assets/sm3.jpg') }}" alt="Service 3" >
+                        <img src="{{url_for('static', filename='assets/sm4.jpg') }}" alt="Service 3">
+                    </div>
+                </div>
+                <div class="colonne">
+                    <div class="service">
+                        <h3>Vente Des Produits Medicaux</h3>
+                        <p>Procurez vous des medicaments et complements dont vous avez besoin.</p>
+                        
+                    </div>
+                    <div class="gallery">
+                        <img src="{{url_for('static', filename='assets/vm1.jpg') }}" alt="Service 4" class="active">
+                        <img src="{{url_for('static', filename='assets/vm2.jpg') }}" alt="Service 4">
+                        <img src="{{url_for('static', filename='assets/vm3.jpg') }}" alt="Service 4">
+                        <img src="{{url_for('static', filename='assets/vm4.jpg') }}" alt="Service 4">
+                    </div>
+                </div>
+                <div class="colonne">
+                    <div class="service">
+                        <h3>Promotion des Medicaments</h3>
+                        <p>Besoin d'une promotion pour vos medicaments et pour votre marque medicale? Nous sommes à votre service.</p>
+                        
+                    </div>
+                    <div class="gallery">
+                        <img src="{{url_for('static', filename='assets/pm3.jpg') }}" alt="Service 5" class="active">
+                        <img src="{{url_for('static', filename='assets/pm2.jpg') }}" alt="Service 5">
+                        <img src="{{url_for('static', filename='assets/pm1.jpg') }}" alt="Service 5">
+                        <img src="{{url_for('static', filename='assets/vm2.jpg') }}" alt="Service 5">
+                        <img src="{{url_for('static', filename='assets/vm1.jpg') }}" alt="Service 5">
+                    </div>
+                </div>
+                <div class="colonne">
+                    <div class="service">
+                        <h3>Formation et Recrutement des Delegués et Visiteurs Medicaux</h3>
+                        <p>Revez vous de devenir delegué medical? Nous sommes à votre disposition pour vous aider à la realiser.</p>
+                        
+                    </div>
+                    <div class="gallery">
+                        <img src="{{url_for('static', filename='assets/fs1.jpg') }}" alt="Service 6" class="active">
+                        <img src="{{url_for('static', filename='assets/fs2.jpg') }}" alt="Service 6">
+                        <img src="{{url_for('static', filename='assets/med1.jpg') }}" alt="Service 6">
+                        <img src="{{url_for('static', filename='assets/med2.jpg') }}" alt="Service 6">
+                        <img src="{{url_for('static', filename='assets/fs1.jpg') }}" alt="Service 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <div class="container">
+            <h2>Nos Produits</h2>
+            <div class="product-list">
+                <div class="product">
+                    <h3>Médicaments</h3>
+                    <p>Large gamme de médicaments disponibles.</p>
+                    <div class="carousel" id="carousel1">
+                        <div class="images active"><img src="{{url_for('static', filename='assets/med.jpg') }}" alt="Image 1A"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/vm5.jpg') }}" alt="Image 1B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/vm1.jpg') }}" alt="Image 1C"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/vm2.jpg') }}" alt="Image 1B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/vm3.jpg') }}" alt="Image 1C"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/vm4.jpg') }}" alt="Image 1B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/vm5.jpg') }}" alt="Image 1C"></div>
+                        <button class="button prev" onclick="changeImage(-1, 'carousel1')">&#10094;</button>
+                        <button class="button next" onclick="changeImage(1, 'carousel1')">&#10095;</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <h3>Compléments alimentaires</h3>
+                    <p>Pour rester en forme au quotidien.</p>
+                    <div class="carousel" id="carousel2">
+                        <div class="images active"><img src="{{url_for('static', filename='assets/ca1.jpg') }}" alt="Image 2A"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/ca2.jpg') }}" alt="Image 2B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/ca3.jpg') }}" alt="Image 2C"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/ca5.png')}}" alt="Image 2B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/ca4.jpg') }}" alt="Image 2C"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/ca6.jpg') }}" alt="Image 2B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/ca7.jpg') }}" alt="Image 2C"></div>
+                        <button class="button prev" onclick="changeImage(-1, 'carousel2')">&#10094;</button>
+                        <button class="button next" onclick="changeImage(1, 'carousel2')">&#10095;</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <h3>Soins</h3>
+                    <p>Produits pour le soin de votre peau et votre corps.</p>
+                    <div class="carousel" id="carousel3">
+                        <div class="images active"><img src="{{url_for('static', filename='assets/sc1.jpg') }}" alt="Image 3A"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/c6.jpg') }}" alt="Image 3B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/sc2.jpg') }}" alt="Image 3B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/sc3.jpg') }}" alt="Image 3C"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/sc4.jpg') }}" alt="Image 3B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/sc5.jpg') }}" alt="Image 3C"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/sc6.jpg') }}" alt="Image 3B"></div>
+                        <div class="images"><img src="{{url_for('static', filename='assets/sc3.jpg') }}" alt="Image 3C"></div>
+                        <button class="button prev" onclick="changeImage(-1, 'carousel3')">&#10094;</button>
+                        <button class="button next" onclick="changeImage(1, 'carousel3')">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <form id="contactForm" action="/send" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="objet">Objet :</label>
+                <input type="text" id="objet" name="objet" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn" id="env">Envoyer</button>
+            </form>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.facebook.com/61551136890935/" style="--i:7"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/green_blue_pharma?igsh=MXMwMXYzNnA4c3Fvbg%3D%3D&utm_source=qr" style="--i:8"><i class='bx bxl-instagram'></i></a>
+            <a href="https://wa.me/message/6WK2E673SWWQC1" style="--i:9"><i class='bx bxl-whatsapp'></i></a>
+            <a href="www.tiktok.com/@green_blue_pharma" style="--i:10"><i class='bx bxl-tiktok'></i></a>
+            <a href="https://www.linkedin.com/in/green-blue-pharma-a25212278/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BC0NUJfYrRHityDORQdRiGQ%3D%3D" style="--i:11"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="icon-container">
+                <div class="icon-row"> 
+                    <i class="fas fa-phone icon"></i> (+221) 33 868 44 94 / (+221) 76 669 24 81
+                    <i class="fas fa-envelope icon" id="mail"></i>greenbluepharma@gmail.com
+                </div>
+                <div class="icon-row">
+                    <i class="fas fa-map-marker-alt icon"></i> Villa N° 1052 Tally Americain, Ouakam, Dakar, Senegal 
+                    <i class="fas fa-calendar-alt icon"></i> Lun-Ven:07h-22h   Sam-Dim:08h-14h
+                </div>
+            </div>
+        </div>
+        <div class="container" id="footer-copyright">
+            <p>&copy; 2024 Green & Blue Pharma. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!--script src="pa.js"></script-->
+    <script src="{{ url_for('static', filename='pa.js') }}"></script>
+</body>
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('show');
+    });
+</script> 
+<script>
+    function changeImage(direction, carouselId) {
+        const carousel = document.getElementById(carouselId);
+        const images = carousel.querySelectorAll('.images');
+        let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+        images[currentIndex].classList.remove('active'); // Cacher l'image actuelle
+        currentIndex = (currentIndex + direction + images.length) % images.length; // Calculer la nouvelle image
+        images[currentIndex].classList.add('active'); // Afficher la nouvelle image
+    }
+</script>
+<!--<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('show');
+    });
+</script> 
+<script>
+    const options={
+        Strings: [" Green & Blue Pharma !", " Green & Blue Pharma !"],
+            typeSpeed: 100,
+            backSpeed: 100, 
+            backDelay: 1000,
+            loop: true
+    };
+</script>--> 
+
+
+</html>
